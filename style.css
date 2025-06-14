@@ -85,3 +85,153 @@ footer {
     background-color: #0b1015;
     color: #888;
 }
+
+/* --- Seções de Conteúdo (YggdraCode e YggdraTech) --- */
+.section-content {
+    padding: 80px 40px; /* Espaçamento interno para o conteúdo */
+    margin: 0 auto; /* Centraliza a seção na página */
+    max-width: 1200px; /* Garante que o conteúdo não fique muito largo em telas grandes */
+    line-height: 1.6; /* Melhor espaçamento entre linhas para leitura */
+    text-align: center; /* Centraliza o texto e os títulos por padrão */
+}
+
+.section-content h2 {
+    font-size: 2.2rem;
+    color: #c19b4a; /* Cor dourada para os títulos das seções */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    position: relative; /* Para a linha decorativa abaixo */
+}
+
+/* Linha decorativa abaixo dos títulos das seções */
+.section-content h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Largura da linha */
+    height: 3px;
+    background-color: #a0b4c1; /* Cor prateada para a linha */
+    margin: 10px auto 0; /* Centraliza a linha */
+}
+
+.section-content p {
+    font-size: 1.1rem;
+    color: #cfcfcf; /* Cor mais clara para parágrafos, mantendo a legibilidade */
+    margin-bottom: 20px;
+    max-width: 800px; /* Limita a largura dos parágrafos para melhor leitura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-content ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    margin-top: 20px;
+    max-width: 700px; /* Limita a largura da lista */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Alinha o texto da lista à esquerda */
+}
+
+.section-content ul li {
+    background-color: #1a2028; /* Fundo sutil para cada item da lista */
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    display: flex; /* Para alinhar ícones se você adicionar depois */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.section-content ul li:hover {
+    transform: translateX(5px); /* Efeito sutil ao passar o mouse */
+}
+
+/* Fundo alternado para a segunda seção (YggdraTech) */
+.alternate-bg {
+    background-color: #1a2028; /* Uma cor de fundo ligeiramente diferente */
+}
+
+/* Wrapper para alinhar texto e imagem lado a lado (se você usar imagens) */
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Padrão em coluna para mobile */
+    align-items: center;
+    gap: 40px; /* Espaçamento entre os elementos */
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row; /* Em telas maiores, alinhar lado a lado */
+        text-align: left; /* Alinha o texto à esquerda quando em linha */
+    }
+
+    .text-content {
+        flex: 1; /* Ocupa o espaço disponível */
+    }
+
+    .section-content p,
+    .section-content ul {
+        margin-left: 0; /* Remove a centralização automática quando o wrapper está em linha */
+        margin-right: 0;
+    }
+}
+
+/* Ajuste do cabeçalho para melhor alinhamento */
+header nav {
+    width: 100%; /* Ocupa a largura total para alinhar melhor os botões */
+    text-align: right; /* Alinha os botões à direita */
+}
+
+/* Estilo para subtítulos h3 dentro das seções de conteúdo */
+.section-content h3 {
+    font-size: 1.6rem; /* Um pouco menor que o h2 */
+    color: #a0b4c1; /* Cor prateada, ou outra que combine com sua paleta */
+    margin-top: 40px; /* Espaço antes do subtítulo */
+    margin-bottom: 15px; /* Espaço depois do subtítulo */
+    text-align: center; /* Centraliza o texto */
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Opcional: Uma linha sutil abaixo dos h3 também */
+.section-content h3::after {
+    content: '';
+    display: block;
+    width: 40px; /* Largura da linha */
+    height: 2px;
+    background-color: #c19b4a; /* Cor dourada para a linha */
+    margin: 5px auto 0; /* Centraliza a linha */
+}
+
+.btn-topo {
+  display: block;
+  margin: 30px auto 0;
+  text-align: center;
+  color: #a0b4c1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.whatsapp-float {
+  z-index: 1000;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
+nav a, .section-content ul li {
+  transition: all 0.3s ease-in-out;
+}
